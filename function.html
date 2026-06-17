@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in js</title>
+</head>
+<body>
+
+    <script>
+        function demo(){
+            console.log( "hello js");
+        }
+        demo();//function calling
+function demo1(text){
+    console.log( "hello"+text);
+}
+demo1("react");
+function cal(a,b=9){
+    console.log( " addition of two no. is "+(a+b))
+}
+demo1("react");
+cal(12)
+demo();
+let msg=function(){
+    console.log("hello js");
+}
+// short code
+//arrow function
+let msg1=()=>console.log(" hello function as an arrow");
+msg1();
+let add=( a,b)=>{
+    console.log("first no. is "+a);
+    console.log( " second no. is"+b);
+    console.log( " addition of two no. is"+(a+b));
+}
+add(4,5);
+//IIFE immediately invoke function
+(function(){
+    console.log( "IIFE is js");
+})();
+(()=>console.log( " IIFE using arrow"))();
+//call back function
+function mul(callback){
+    var num1=10;
+    console.log("first no. is"+num1);
+    var num2=20;
+    console.log("second no. is"+num2);
+    var res=num1*num2;
+    callback(res);
+}
+function result(res){
+    console.log("multiplication is "+ res);
+}
+mul(result);
+//call back function using setlineout api
+function msg2(){
+    console.log("hello call back");
+    document.writeIn( " loading..........");
+};
+function loading(){
+    console.log(" hello himanshu")
+};
+setTimeout( msg2 , 2000);
+loading();
+let num=[3,4,5,7]
+    </script>
+    
+</body>
+</html>
