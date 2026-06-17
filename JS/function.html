@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in js</title>
+</head>
+<body>
+
+    <script>
+        function demo(){
+            console.log( "hello js");
+        }
+        demo();//function calling
+function demo1(text){
+    console.log( "hello"+text);
+}
+demo1("react");
+function cal(a,b=9){
+    console.log( " addition of two no. is "+(a+b))
+}
+demo1("react");
+cal(12)
+demo();
+let msg=function(){
+    console.log("hello js");
+}
+// short code
+//arrow function
+let msg1=()=>console.log(" hello function as an arrow");
+msg1();
+let add=( a,b)=>{
+    console.log("first no. is "+a);
+    console.log( " second no. is"+b);
+    console.log( " addition of two no. is"+(a+b));
+}
+add(4,5);
+//IIFE immediately invoke function
+(function(){
+    console.log( "IIFE is js");
+})();
+(()=>console.log( " IIFE using arrow"))();
+//call back function
+function mul(callback){
+    var num1=10;
+    console.log("first no. is"+num1);
+    var num2=20;
+    console.log("second no. is"+num2);
+    var res=num1*num2;
+    callback(res);
+}
+function result(res){
+    console.log("multiplication is "+ res);
+}
+
+// promises stage 
+async function userData(){
+    try{
+        let data =await fetch ( 'https://dummyjson.com/products');
+        let updateData=await data .json();
+        console.log( updateData);
+}
+catch(error){
+console.log( " not fetched"+error);
+}
+}
+userData();
+//local storage
+let userInfo={
+name:" john",
+age:23,
+mob:12345678908,
+email:" john@gmial.com",
+}
+localStorage .setItem( 'prefrences',JSON.stringify(userInfo));
+let storagePrefrences=JSON.parse(localStorage.getItem('prefrences'));
+console.log( storagePrefrences.name);
+
+    </script>
+    
+</body>
+</html>
